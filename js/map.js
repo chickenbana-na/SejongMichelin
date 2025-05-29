@@ -1,13 +1,13 @@
 // 지도 초기화
 const map = new naver.maps.Map('map', {
     center: new naver.maps.LatLng(37.550848, 127.074607),
-    zoom: 16
+    zoom: 18
 });
 
 function loadMap(y, x) {
-    map.setCenter(new naver.LatLng(y,x));
+    map.setCenter(new naver.maps.LatLng(y,x));
+   
 }
-
 // JSON 파일 불러오기
 fetch('./restaurant.json')
     .then(response => {
