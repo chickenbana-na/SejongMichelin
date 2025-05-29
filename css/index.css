@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+/*메인 container*/
+.main-container {
+    display: flex;
+    height: 100%;
+}
+.map-container {
+    flex:2;
+}
+.restaurant-list-layout {
+    flex:1;
+}
+.recommend-borad {
+    width:450px;
+    background:#eef2f7;
+    margin:0;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    padding:0;
+}
+
+/* 룰렛 css*/
+#container {
+    text-align:center;
+    position:relative;
+    height: 100%;
+}
+#container h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+canvas {
+    margin-top:1rem;
+    transition:2s ease;
+    border-radius:50%;
+    background:#fff;
+}
+button {
+    background:#fbb034;margin-top:1rem;padding:0.7rem 1.5rem;border:none;
+    font-size:1.4rem;font-weight:700;border-radius:6px;cursor:pointer;
+    transition:.2s,.2s color;
+}
+button:active {background:#444;color:#fff;}
+#pointer {
+    position:absolute;top:15%;left:47%;
+    transform:translate(calc(-50% -200px),calc(-35px + 100px)) rotate(0deg);
+    width:0;height:0;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-top:50px solid red;
+    z-index:10;
+}
+#inputArea {margin-bottom:10px;}
+#menuInput {
+    width:60%;padding:.5rem;font-size:1.1rem;border-radius:6px;border:1px solid #ccc;
+    box-sizing:border-box;
+}
+#addBtn {
+    padding:.6rem 1rem;margin-left:8px;font-size:1.1rem;border-radius:6px;
+    border:none;background:#4caf50;color:#fff;cursor:pointer;
+    transition:.2s;
+}
+#addBtn:hover {background:#45a049;}
+#menuList {display:none;margin-top:10px;min-height:24px;font-size:1.1rem;color:#333;}
+#menuList span {
+    display:inline-block;
+    background:#fbb034;
+    color:#fff;
+    padding:4px 10px;
+    border-radius:15px;
+    margin:3px 5px 3px 0;
+    user-select:none;
+}
