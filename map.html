@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>세종대 주변 맛집 지도</title>
-     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2qz7uouu7w"></script>
-    <style>
-        #map {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2qz7uouu7w"></script>
 </head>
 <body>
-    <div id="map"></div>
+<div id="map" style="width:100%;height:400px;"></div>
 
-    <script>
-        // 지도 초기화
-        const map = new naver.maps.Map('map', {
-            center: new naver.maps.LatLng(37.550848, 127.074607),
-            zoom: 16
-        });
+<script>
+var mapOptions = {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+};
 
-        
-    </script>
+var map = new naver.maps.Map('map', mapOptions);
+</script>
 </body>
 </html>
