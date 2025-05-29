@@ -4,9 +4,8 @@ const map = new naver.maps.Map('map', {
     zoom: 16
 });
 
-function loadMap(x, y) {
-    map.center.x = x;
-    map.center.y = y;
+function loadMap(y, x) {
+    map.setCenter(new naver.LatLng(y,x));
 }
 
 // JSON 파일 불러오기
