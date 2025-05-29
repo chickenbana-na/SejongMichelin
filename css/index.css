@@ -1,4 +1,4 @@
-body {
+ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁbody {
     margin: 0px;
     height: 100vh;
 }
@@ -50,7 +50,7 @@ body {
     width: 80%;
     max-width: 500px;
     height: auto;
-    text-align: left;
+    text-align: center;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 부드럽고 얕은 그림자 */
     font-size: 16px;
