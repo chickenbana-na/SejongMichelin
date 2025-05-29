@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sejong_restaurant</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2qz7uouu7w"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        <div class="restaurant-list-layout">
+            식당 목록
+        </div>
+        <div class="recommend-borad">
+            <div id="container">
+                <h2>메뉴에 없는 식당은 직접 입력!</h2>
+                <div id="inputArea">
+                    <input id="menuInput" placeholder="메뉴 이름 입력 후 엔터 또는 추가 버튼 클릭" autocomplete="off" />
+                    <button id="addBtn">추가</button>
+                </div>
+                <div id="menuList"></div>
+                <div id="pointer"></div>
+                <canvas id="roulette" width="400" height="400"></canvas>
+                <button id="spinBtn">돌리기</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/recommendBoard.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+</html>
