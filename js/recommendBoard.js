@@ -7,7 +7,9 @@ const canvas=document.getElementById("roulette"),
 
 let rouletteList=[],colors=[];
 
-const genColors=()=>rouletteList.map(_=>`rgb(${100+Math.random()*155|0},${100+Math.random()*155|0},${100+Math.random()*155|0})`);
+function genColor() {
+    return `rgb(${100 + Math.random() * 155 | 0},${100 + Math.random() * 155 | 0},${100 + Math.random() * 155 | 0})`;
+}
 
 function drawWheel() {
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -16,8 +18,6 @@ function drawWheel() {
     const cx=canvas.width/2, cy=canvas.height/2,
           arc=(Math.PI*2)/rouletteList.length,
           startAngle=Math.PI/2;
-
-    colors=genColors();
 
     rouletteList.forEach((item,i)=>{
         const start=startAngle+arc*i,
@@ -43,12 +43,21 @@ function drawWheel() {
 }
 
 function addMenuItem(){
-    const val=menuInput.value.trim();
-    if(!val)return alert("메뉴를 추가해 주세요!");
-    if(rouletteList.length>=20)return alert("메뉴는 최대 20개까지 추가할 수 있습니다.");
+    const val = menuInput.value.trim();
+    if (!val) return alert("메뉴를 추가해 주세요!");
+    if (rouletteList.length >= 10) return alert("메뉴는 최대 10개까지 추가할 수 있습니다.");
 
     rouletteList.push(val);
-    menuInput.value="";
+    colors.push(genColor()); // ❗️색상 추가
+    menuInput.value = "";
+    drawWheel();
+}
+
+function addMenuItemFromList(name){
+    if (rouletteList.length >= 10) return alert("메뉴는 최대 10개까지 추가할 수 있습니다.");
+
+    rouletteList.push(name);
+    colors.push(genColor()); // ❗️색상 추가
     drawWheel();
 }
 
