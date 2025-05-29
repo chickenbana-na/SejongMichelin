@@ -13,7 +13,10 @@ fetch('./restaurant.json')
         restaurant.forEach(element => {
             const nowRestaurant = document.createElement("div");
             nowRestaurant.className = "restaurant-list-item";
-            nowRestaurant.onclick = () => { addMenuItemFromList(element.name) };
+            nowRestaurant.onclick = () => { 
+                addMenuItemFromList(element.name);
+                loadMap(element.position[0], element.position[1]); 
+            };
             nowRestaurant.innerHTML = element.name;
             restaurantList.appendChild(nowRestaurant);
         });

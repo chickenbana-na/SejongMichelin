@@ -4,6 +4,11 @@ const map = new naver.maps.Map('map', {
     zoom: 16
 });
 
+function loadMap(x, y) {
+    map.center.x = x;
+    map.center.y = y;
+}
+
 // JSON 파일 불러오기
 fetch('./restaurant.json')
     .then(response => {
