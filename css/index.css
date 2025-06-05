@@ -94,7 +94,6 @@ body {
     flex-direction: column;
     text-align:center;
     align-items: center;
-    justify-content: center;
     height: 100%;
 }
 #container h2 {
