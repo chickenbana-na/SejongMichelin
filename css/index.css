@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #FAFAF5;
+    overflow-y: scroll;
 }
 .recommend-borad {
     width:450px;
@@ -71,11 +72,21 @@ body {
 }
 
 /* 룰렛 css*/
+#roulette {
+    width: 400px;
+    height: 400px;
+    transform-origin: center center;
+    display: block;
+    margin: 0 auto;
+    will-change: transform;
+    contain: strict;
+}
 .roulette-wrapper {
     width: 300px;
     height: 300px;
     overflow: hidden; /* 회전 시 튀어나오는 영역 숨김 */
     margin: 0 auto;    /* 가운데 정렬 (선택) */
+    
     position: relative;
 }
 #container {
