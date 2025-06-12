@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #FAFAF5;
-    overflow-y: scroll;
+    height: 100vh;
 }
 .recommend-borad {
     width:450px;
@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow-y: scroll;
 }
 .restaurant-list-item {
     background-color: #ffffff; /* 흰색 배경으로 깔끔하게 */
