@@ -33,7 +33,7 @@ body {
 
 /*restaurant-list style*/
 .list-text {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 20px;
     padding: 20px;
 }
